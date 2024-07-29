@@ -4,7 +4,7 @@ import path from "path";
 
 export default defineConfig({
   plugins: [react()],
-  base: "/",
+  base: "/movieApp/",
   resolve: {
     alias: {
       "@data": path.resolve(__dirname, "src/data"),

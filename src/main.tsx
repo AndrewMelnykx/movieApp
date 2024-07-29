@@ -9,14 +9,12 @@ const router = createBrowserRouter([
   {
     path: "/",
     element: <App />,
+    errorElement: <div>Error dude!</div>,
   },
+
   {
     path: "/add_info/:movieId",
     element: <CardRout />,
-  },
-  {
-    path: "*",
-    element: <div>Error dude!</div>,
   },
 ]);
 
