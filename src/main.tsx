@@ -11,7 +11,6 @@ const router = createBrowserRouter([
     element: <App />,
     errorElement: <div>Error dude!</div>,
   },
-
   {
     path: "/add_info/:movieId",
     element: <CardRout />,
@@ -20,6 +19,6 @@ const router = createBrowserRouter([
 
 ReactDOM.createRoot(document.getElementById("root")!).render(
   <React.StrictMode>
-    <RouterProvider router={router}></RouterProvider>
+    <RouterProvider router={router} />
   </React.StrictMode>,
 );
