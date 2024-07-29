@@ -1,0 +1,9 @@
+#filter-select:hover {
+  color: aqua;
+}
+#filter-select {
+  color: black;
+  font-size: 1.2rem;
+  margin-left: 2%;
+  margin-bottom: 5%;
+}

@@ -1,0 +1,20 @@
+body,
+html,
+#root {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+}
+@font-face {
+  font-family: "Roman Jelly";
+  src: local("CustomFont"), url("./assets/font/jellee.roman.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+body {
+  font-family: "Roman Jelly", Arial, sans-serif;
+}
+.header {
+  font-family: "Roman Jelly";
+}

@@ -1,0 +1,21 @@
+.custom-slider .MuiSlider-thumb {
+  background-color: black;
+}
+
+.custom-slider .MuiSlider-track {
+  background-color: black;
+}
+
+.custom-slider .MuiSlider-thumb:hover {
+  background-color: aqua;
+}
+
+.custom-slider .MuiSlider-track:hover {
+  background-color: aqua;
+}
+.custom-slider .MuiSlider-rail {
+  background-color: black;
+}
+.year-slider-typography:hover {
+  color: aqua;
+}

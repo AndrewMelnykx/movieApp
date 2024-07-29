@@ -1,0 +1,4 @@
+.filter-typography:hover {
+  color: aqua;
+  transition: 0.3s ease-in-out;
+}
