@@ -8,8 +8,8 @@ import CardRout from "@components/cards/CardRouts";
 const router = createBrowserRouter([
   {
     path: "/",
-    element: <App />,
-    errorElement: <div>Error dude!</div>,
+    element: <div>Error dude!</div>,
+    errorElement: <App />,
   },
   {
     path: "/add_info/:movieId",
