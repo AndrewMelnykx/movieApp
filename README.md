@@ -1,3 +1,9 @@
+
+Guide [MovieApp](https://andrewmelnykx.github.io/movieApp/)
+
+You have to be registrated on TMDB and already have token.
+Just use it inside token with arbitrary name and enjoy your movies!
+ 
 1.MovieApp Guide: MovieApp is a comprehensive platform for movie enthusiasts to explore, rate, and manage their favorite films.
 
 2.React and MUI: Built using React, MovieApp offers a modern, component-based architecture. MUI (Material-UI) provides a polished and responsive user interface, enhancing the app's visual appeal and usability.
