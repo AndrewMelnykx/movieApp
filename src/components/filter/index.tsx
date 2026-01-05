@@ -1,21 +1,22 @@
 import React from "react";
-import "./Filter.css";
+import { useSelector } from "react-redux";
+
+import YearsSlider from "@selectors/year-slider/YearsSlider";
+import SearchInput from "@components/selectors/search-input/SearchInput";
+import { UseStoreDispatcher } from "@redux/store/store";
+import { FilterSelectorOption } from "@stateSelectors/filter-handling-selectors";
+import { filterAction } from "@slices/filter-slice";
+import { dataActions } from "@redux/slices/data-slice";
+import OptionSelect from "@selectors/option-selector/OptionSelector";
 
 import { Box, Typography, IconButton, SelectChangeEvent, Paper } from "@mui/material";
 import CloseOutlinedIcon from "@mui/icons-material/CloseOutlined";
 
-import OptionSelect from "@selectors/option-selector/OptionSelector";
 import CheckboxGenres from "../checkbox/Checkbox";
-import PaginationMovies from "../pagination/Pagination";
-
+import PaginationMovies from "../pagination";
 import { byOption } from "@helpers/const-values";
-import YearsSlider from "@selectors/year-slider/YearsSlider";
-import SearchInput from "@components/selectors/search-input/SearchInput";
-import { UseStoreDispatcher } from "@redux/store/store";
-import { useSelector } from "react-redux";
-import { FilterSelectorOption } from "@stateSelectors/filter-handling-selectors";
-import { filterAction } from "@slices/filter-slice";
-import { dataActions } from "@redux/slices/data-slice";
+
+import "./index.css";
 
 const Filter = () => {
   const dispatch = UseStoreDispatcher();
@@ -36,7 +37,13 @@ const Filter = () => {
         <Box sx={{ width: "400px", height: "600px", display: "flex", flexDirection: "column" }}>
           <Box sx={{ display: "flex" }}>
             {" "}
-            <Typography variant="h4" ml={2} mt={1} style={{ flexGrow: 1 }} className="filter-typography">
+            <Typography
+              variant="h4"
+              ml={2}
+              mt={1}
+              style={{ flexGrow: 1 }}
+              className="filter-typography"
+            >
               {" "}
               Filters
             </Typography>{" "}

@@ -1,10 +1,20 @@
 import React, { useState } from "react";
-import { Button, DialogActions, Dialog, DialogTitle, DialogContent, TextField, DialogContentText } from "@mui/material";
-import { handleReload, handleUserTokenAndIdCookiesSetting } from "@helpers/additional-funcs";
-import "./LoginModal.css";
+
 import { UseStoreDispatcher } from "@redux/store/store";
 import { authorizationActions } from "@redux/slices/authorization-slice";
+import {
+  Button,
+  DialogActions,
+  Dialog,
+  DialogTitle,
+  DialogContent,
+  TextField,
+  DialogContentText,
+} from "@mui/material";
+import { handleReload, handleUserTokenAndIdCookiesSetting } from "@helpers/additional-funcs";
 import { preloadTime } from "@helpers/const-values";
+
+import "./index.css";
 
 export default function AuthorizationModal() {
   const dispatch = UseStoreDispatcher();
@@ -47,7 +57,9 @@ export default function AuthorizationModal() {
         <form onSubmit={handleSubmit}>
           <DialogTitle>Login Form</DialogTitle>
           <DialogContent>
-            <DialogContentText>For further cooperation, please enter username and token here</DialogContentText>
+            <DialogContentText>
+              For further cooperation, please enter username and token here
+            </DialogContentText>
             <TextField
               autoFocus
               required

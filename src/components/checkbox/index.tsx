@@ -1,15 +1,17 @@
 import React, { useCallback, useEffect, useMemo } from "react";
-import CheckBoxOutlineBlankIcon from "@mui/icons-material/CheckBoxOutlineBlank";
-import CheckBoxIcon from "@mui/icons-material/CheckBox";
 import { useSelector } from "react-redux";
-import { UseStoreDispatcher } from "@redux/store/store";
 
-import { TextField, Checkbox, Autocomplete, Box } from "@mui/material";
-import { ToastContainer, toast } from "react-toastify";
-import "react-toastify/dist/ReactToastify.css";
+import { UseStoreDispatcher } from "@redux/store/store";
 import { FIlterSelectorGenres } from "@stateSelectors/filter-handling-selectors";
 import { filterAction } from "@slices/filter-slice";
 import { fetchInitialGenresThunk } from "@redux/slices/actions-slice";
+
+import CheckBoxOutlineBlankIcon from "@mui/icons-material/CheckBoxOutlineBlank";
+import CheckBoxIcon from "@mui/icons-material/CheckBox";
+import { TextField, Checkbox, Autocomplete, Box } from "@mui/material";
+
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 const icon = <CheckBoxOutlineBlankIcon fontSize="small" />;
 const checkedIcon = <CheckBoxIcon fontSize="small" />;
@@ -57,7 +59,12 @@ const CheckboxGenres = () => {
         }}
         renderOption={(props, option, { selected }) => (
           <li {...props}>
-            <Checkbox icon={icon} checkedIcon={checkedIcon} style={{ marginRight: 8 }} checked={selected} />
+            <Checkbox
+              icon={icon}
+              checkedIcon={checkedIcon}
+              style={{ marginRight: 8 }}
+              checked={selected}
+            />
             {option.name}
           </li>
         )}

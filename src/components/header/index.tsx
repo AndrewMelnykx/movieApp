@@ -1,8 +1,12 @@
 import React from "react";
-import { AppBar, Toolbar, IconButton, Typography } from "@mui/material";
-import LoginOutlinedIcon from "@mui/icons-material/LoginOutlined";
+
 import { UseStoreDispatcher } from "@redux/store/store";
 import { authorizationActions } from "@redux/slices/authorization-slice";
+
+import { AppBar, Toolbar, IconButton, Typography } from "@mui/material";
+import LoginOutlinedIcon from "@mui/icons-material/LoginOutlined";
+
+import "./index.css";
 
 const Header = () => {
   const dispatch = UseStoreDispatcher();

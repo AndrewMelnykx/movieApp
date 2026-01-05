@@ -18,9 +18,9 @@ import MovieCards from "@components/cards/CardsByCondition";
 import { tokenFromCookies } from "@helpers/const-values";
 import HeroImage from "@assets/images/MovieHeroImage.png";
 
-import "./MainPage.css";
+import "./index.css";
 
-export default function MainPage() {
+export default function Hero() {
   const signUpVisibilityState = useSelector(SIgnUpAuthorizationSelector);
   const loginVisibilityState = useSelector(LoginAuthorizationSelector);
   const filterVisibilityState = useSelector(FilterAuthorizationSelector);
@@ -48,6 +48,7 @@ export default function MainPage() {
         height: "100vh",
         display: "flex",
         flexDirection: "column",
+        backgroundColor: "black",
       }}
     >
       <Header />

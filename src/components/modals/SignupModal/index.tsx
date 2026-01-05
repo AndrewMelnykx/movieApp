@@ -1,7 +1,19 @@
 import React, { useState } from "react";
-import { Dialog, DialogContentText, TextField, DialogTitle, DialogActions, DialogContent, Button } from "@mui/material";
+
 import { UseStoreDispatcher } from "@redux/store/store";
 import { authorizationActions } from "@redux/slices/authorization-slice";
+
+import {
+  Dialog,
+  DialogContentText,
+  TextField,
+  DialogTitle,
+  DialogActions,
+  DialogContent,
+  Button,
+} from "@mui/material";
+
+import "./index.css";
 
 export default function SignupModal() {
   const dispatch = UseStoreDispatcher();
