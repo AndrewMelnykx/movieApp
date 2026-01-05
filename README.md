@@ -1,30 +1,21 @@
-# React + TypeScript + Vite
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Guide [MovieApp](https://andrewmelnykx.github.io/movieApp/)
+![Screenshot 2025-06-06 100758](https://github.com/user-attachments/assets/a3fbfdc7-b79f-4b64-a8d9-f00380c2032f)
+![image](https://github.com/user-attachments/assets/574a3c8d-8e85-4193-9df3-b94421233503)
 
-Currently, two official plugins are available:
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+You have to be registrated on TMDB and already have token.
+Just use it inside token with arbitrary name and enjoy your movies!
+ 
+1.MovieApp Guide: MovieApp is a comprehensive platform for movie enthusiasts to explore, rate, and manage their favorite films.
 
-## Expanding the ESLint configuration
+2.React and MUI: Built using React, MovieApp offers a modern, component-based architecture. MUI (Material-UI) provides a polished and responsive user interface, enhancing the app's visual appeal and usability.
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+3.Redux Toolkit: For efficient state management, MovieApp uses Redux Toolkit. This tool simplifies state management by providing a set of utilities to streamline the process, ensuring consistent and predictable data flow across the application.
 
-- Configure the top-level `parserOptions` property like this:
+4.React Router: Navigation within the app is handled by React Router, enabling smooth transitions between pages like Popular Movies, Ratings, and Favorites. This allows users to effortlessly browse different sections.
 
-```js
-export default {
-  // other rules...
-  parserOptions: {
-    ecmaVersion: 'latest',
-    sourceType: 'module',
-    project: ['./tsconfig.json', './tsconfig.node.json'],
-    tsconfigRootDir: __dirname,
-  },
-}
-```
+5.Toastify: To enhance user experience, MovieApp integrates Toastify for real-time notifications. Whether it's confirming actions or alerting users to updates, Toastify provides clear and immediate feedback, making interactions more engaging and informative.
 
-- Replace `plugin:@typescript-eslint/recommended` to `plugin:@typescript-eslint/recommended-type-checked` or `plugin:@typescript-eslint/strict-type-checked`
-- Optionally add `plugin:@typescript-eslint/stylistic-type-checked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and add `plugin:react/recommended` & `plugin:react/jsx-runtime` to the `extends` list
+Feel free to use my API key 
+eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiIyMTBlNmYwN2NmNGI1ZjU2M2IyOWM5NmU2YmIzYjM5MSIsIm5iZiI6MTcyNjQ3NTc3MS40NzQwNDYsInN1YiI6IjY2MGU3OTgxZDZkYmJhMDE3ZDcyZWY3ZSIsInNjb3BlcyI6WyJhcGlfcmVhZCJdLCJ2ZXJzaW9uIjoxfQ.ebGp8Le-AXk7pmhhnYevqf7sjTKmcvMNpKI1ySFwkkk
