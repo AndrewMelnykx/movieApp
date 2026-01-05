@@ -1,15 +1,4 @@
 import React, { useEffect, useCallback } from "react";
-import "./MainPage.css";
-
-import AuthorizationModal from "@modals/LoginModal/LoginModal";
-import SignupModal from "@modals/SignupModal/SignupModal";
-import Header from "@header/Header";
-import Filter from "@filter/Filter";
-import { tokenFromCookies } from "@helpers/const-values";
-
-import { Box } from "@mui/material";
-import MovieCards from "@components/cards/CardsByCondition";
-import ImportantMessage from "@components/important-message/ImportantMessage";
 import { useSelector } from "react-redux";
 import {
   FilterAuthorizationSelector,
@@ -18,6 +7,18 @@ import {
 } from "@stateSelectors/authorization-selectors";
 import { UseStoreDispatcher } from "@redux/store/store";
 import { authorizationActions } from "@redux/slices/authorization-slice";
+
+import AuthorizationModal from "@modals/LoginModal/LoginModal";
+import SignupModal from "@modals/SignupModal/SignupModal";
+import Header from "@header/Header";
+import Filter from "@filter/Filter";
+
+import { Box } from "@mui/material";
+import MovieCards from "@components/cards/CardsByCondition";
+import { tokenFromCookies } from "@helpers/const-values";
+import HeroImage from "@assets/images/MovieHeroImage.png";
+
+import "./MainPage.css";
 
 export default function MainPage() {
   const signUpVisibilityState = useSelector(SIgnUpAuthorizationSelector);
@@ -37,9 +38,19 @@ export default function MainPage() {
   }, [changeFilterVisibility, filterVisibilityState]);
 
   return (
-    <>
+    <Box
+      sx={{
+        backgroundImage: `url(${HeroImage})`,
+        backgroundSize: "100% auto",
+        backgroundPosition: "center",
+        backgroundRepeat: "no-repeat",
+        width: "100vw",
+        height: "100vh",
+        display: "flex",
+        flexDirection: "column",
+      }}
+    >
       <Header />
-      {wrongToken && <ImportantMessage />}
       <Box className="cards-flex-container">
         <Box sx={{ marginLeft: "5%" }}>{filterVisibilityState && <Filter />}</Box>
 
@@ -49,6 +60,6 @@ export default function MainPage() {
       </Box>
       {signUpVisibilityState && <SignupModal />}
       {loginVisibilityState && <AuthorizationModal />}
-    </>
+    </Box>
   );
 }
