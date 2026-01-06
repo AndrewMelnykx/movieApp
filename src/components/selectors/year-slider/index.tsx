@@ -1,10 +1,7 @@
 import React, { useEffect } from "react";
-import { Box, Slider, Typography } from "@mui/material";
-import { maxYear, minYear } from "../../../helpers/magic-numbers";
-
-import "./YearsSlider.css";
 import { UseStoreDispatcher } from "@redux/store/store";
 import { useSelector } from "react-redux";
+
 import {
   FIlterSelectorGenres,
   FilterSelectorOption,
@@ -13,6 +10,11 @@ import {
 } from "@stateSelectors/filter-handling-selectors";
 import { filterAction } from "@slices/filter-slice";
 import { fetchYearArrangeMoviesThunk } from "@redux/slices/actions-slice";
+
+import { Box, Slider, Typography } from "@mui/material";
+import { maxYear, minYear } from "@helpers/magic-numbers";
+
+import "./YearsSlider.css";
 
 const YearsSlider = () => {
   const dispatch = UseStoreDispatcher();

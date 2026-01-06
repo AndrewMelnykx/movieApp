@@ -36,8 +36,10 @@ const SearchInput = () => {
   }, [fetchSearch]);
 
   return (
-    <Box>
-      <FormControl sx={{ width: "90%", margin: "3%", marginLeft: "3%", marginTop: "8%", color: "black" }}>
+    <Box width={{ xs: "85%", md: "100%" }}>
+      <FormControl
+        sx={{ width: "90%", margin: "3%", marginLeft: "3%", marginTop: "8%", color: "black" }}
+      >
         <TextField
           sx={{
             "& .MuiInputBase-input": {

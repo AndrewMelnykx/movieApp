@@ -1,13 +1,22 @@
 import React from "react";
-import "./Option.css";
 
 import { FormControl, InputLabel, MenuItem, Select, Box } from "@mui/material";
 import { SelectorsProps } from "../selectors_types";
 
-const OptionSelect: React.FC<SelectorsProps> = ({ selectValue, onChange, label, MenuItemContext }) => {
+import "./index.css";
+
+const OptionSelect: React.FC<SelectorsProps> = ({
+  selectValue,
+  onChange,
+  label,
+  MenuItemContext,
+}) => {
   return (
-    <Box>
-      <FormControl variant="standard" sx={{ width: "90%", margin: "3%", marginLeft: "3%", marginTop: "8%" }}>
+    <Box width={{ xs: "60%", md: "100%" }}>
+      <FormControl
+        variant="standard"
+        sx={{ width: "100%", margin: "3%", marginLeft: "3%", marginTop: "8%" }}
+      >
         <InputLabel id="filter-select">
           <i> Filter by: {label}</i>
         </InputLabel>

@@ -32,7 +32,14 @@ const Filter = () => {
   };
 
   return (
-    <Paper sx={{ position: "relative", width: "410px", height: "610px", marginLeft: "5%" }}>
+    <Paper
+      sx={{
+        position: "relative",
+        width: { xs: "300px", md: "410px" },
+        height: "610px",
+        marginLeft: "5%",
+      }}
+    >
       <Box className="container" sx={{ display: "flex" }}>
         <Box sx={{ width: "400px", height: "600px", display: "flex", flexDirection: "column" }}>
           <Box sx={{ display: "flex" }}>
