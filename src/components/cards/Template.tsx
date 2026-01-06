@@ -1,9 +1,10 @@
 import React, { useEffect, useState } from "react";
+import { useSelector } from "react-redux";
 import { Link } from "react-router-dom";
 
 import { CardButton } from "./Button";
 import { MovieProps } from "./types";
-import { useSelector } from "react-redux";
+import EmptyImage from "@assets/images/no-image-cinema.jpg";
 
 import { Box, Card, Paper, Typography, CardMedia, CardContent } from "@mui/material";
 import { DataSelectorFavorites } from "@stateSelectors/data-handling-selectors";
@@ -37,12 +38,18 @@ const CardItem: React.FC<{ movie: MovieProps }> = ({ movie }) => {
   return (
     <Box key={movie.id} sx={{ display: "flex", justifyContent: "center" }}>
       <Card sx={{ display: "flex" }} key={movie.id}>
-        <Paper>
+        <Paper sx={{ borderRadius: "1rem" }}>
           <Link to={`/add_info/${movie.id}`}>
             <CardMedia
               component="img"
-              sx={{ width: "200px", margin: "0" }}
-              image={`${imageLink}${movie.poster_path}`}
+              sx={{
+                width: "85%",
+                margin: "0 auto",
+                display: "block",
+                p: "10% 5%",
+                borderRadius: "5.4rem",
+              }}
+              image={movie.poster_path ? `${imageLink}${movie.poster_path}` : EmptyImage}
               alt={`${movie.title}`}
             />
           </Link>

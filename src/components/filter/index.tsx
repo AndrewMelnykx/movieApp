@@ -37,7 +37,7 @@ const Filter = () => {
         position: "relative",
         width: { xs: "280px", md: "390px" },
         height: { xs: "480px", md: "530px" },
-        marginLeft: { xs: "10%", md: "5%" },
+        marginLeft: { xs: "10%", md: "-3%" },
         borderRadius: "1rem",
       }}
     >

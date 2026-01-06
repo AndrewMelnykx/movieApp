@@ -104,7 +104,21 @@ const MovieCards = () => {
   }, [fetchMovies]);
 
   return (
-    <Box className="cards-grid-container">
+    <Box
+      sx={{
+        display: "grid",
+        gridTemplateColumns: {
+          xs: "1fr",
+          sm: "repeat(2, 1fr)",
+          md: "repeat(3, 1fr)",
+          lg: "repeat(4, 1fr)",
+        },
+        gap: "35px",
+        padding: "24px",
+        maxWidth: "70%",
+        margin: "0 auto",
+      }}
+    >
       {(searchIsValid ? searchMoviesState : movieData).map(movie => (
         <CardItem movie={movie} key={movie.id} />
       ))}

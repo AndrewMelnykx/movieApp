@@ -53,11 +53,9 @@ export default function Hero() {
       }}
     >
       <Header />
-      <Box className="cards-flex-container">
+      <Box display={{ xs: "block", md: "flex" }}>
         <Box sx={{ marginLeft: "5%" }}>{filterVisibilityState && <Filter />}</Box>
-        <Box>
-          <MovieCards />
-        </Box>
+        <MovieCards />
       </Box>
       {wrongToken && <ImportantMessage />}
 
