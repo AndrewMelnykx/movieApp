@@ -12,7 +12,7 @@ const OptionSelect: React.FC<SelectorsProps> = ({
   MenuItemContext,
 }) => {
   return (
-    <Box width={{ xs: "60%", md: "100%" }}>
+    <Box width={{ xs: "86%", md: "93%" }} ml={{ xs: "1%", md: "0" }}>
       <FormControl
         variant="standard"
         sx={{ width: "100%", margin: "3%", marginLeft: "3%", marginTop: "8%" }}

@@ -45,7 +45,7 @@ const CheckboxGenres = () => {
   );
 
   return (
-    <Box mt={2}>
+    <Box mt={2} width={{ xs: "86%", md: "93%" }} ml={1}>
       <Autocomplete
         multiple
         id="checkboxes-tags-demo"
@@ -53,6 +53,7 @@ const CheckboxGenres = () => {
         disableCloseOnSelect
         getOptionLabel={option => option.name}
         value={checkedGenres}
+        fullWidth
         onChange={(e, newValue) => {
           const selectedIds = newValue.map(genre => genre.id);
           handleGenresToggling(selectedIds);
@@ -68,7 +69,6 @@ const CheckboxGenres = () => {
             {option.name}
           </li>
         )}
-        style={{ width: 370, marginLeft: "2%" }}
         sx={{
           "& .MuiInputBase-input": {
             color: "black",

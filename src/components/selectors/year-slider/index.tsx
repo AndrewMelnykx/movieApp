@@ -14,7 +14,7 @@ import { fetchYearArrangeMoviesThunk } from "@redux/slices/actions-slice";
 import { Box, Slider, Typography } from "@mui/material";
 import { maxYear, minYear } from "@helpers/magic-numbers";
 
-import "./YearsSlider.css";
+import "./index.css";
 
 const YearsSlider = () => {
   const dispatch = UseStoreDispatcher();
@@ -40,7 +40,7 @@ const YearsSlider = () => {
   }, [yearsSliderState, checkedGenres]);
 
   return (
-    <Box mt={3} mb={2} ml={2} width={360}>
+    <Box mt={3} mb={2} ml={2} width={{ xs: "80%", md: "90%" }}>
       <Typography mb={1} className="year-slider-typography">
         <i>Filter by:year</i>
       </Typography>

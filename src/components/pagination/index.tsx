@@ -16,10 +16,9 @@ const PaginationMovies = () => {
 
   return (
     <Stack
-      spacing={2}
       sx={{
         margin: "2%",
-        marginTop: "auto",
+        marginTop: { xs: "10%", md: "15" },
         "& .MuiPaginationItem-root": {
           transition: "color 0.3s ease-in-out",
         },
@@ -33,7 +32,12 @@ const PaginationMovies = () => {
         },
       }}
     >
-      <Pagination count={500} variant="outlined" page={state} onChange={handlePageChange}></Pagination>
+      <Pagination
+        count={500}
+        variant="outlined"
+        page={state}
+        onChange={handlePageChange}
+      ></Pagination>
     </Stack>
   );
 };

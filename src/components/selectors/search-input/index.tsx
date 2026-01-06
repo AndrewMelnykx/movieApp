@@ -36,7 +36,7 @@ const SearchInput = () => {
   }, [fetchSearch]);
 
   return (
-    <Box width={{ xs: "85%", md: "100%" }}>
+    <Box width={{ xs: "95%", md: "103%" }} ml={{ xs: "1%", md: "0" }}>
       <FormControl
         sx={{ width: "90%", margin: "3%", marginLeft: "3%", marginTop: "8%", color: "black" }}
       >
