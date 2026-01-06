@@ -1,19 +1,13 @@
 import React, { useCallback, useEffect, useState } from "react";
-import "@components/main-page/MainPage.css";
-import CardItem from "./CardTemplate";
-import { Box } from "@mui/material";
-import { MovieProps } from "./types";
-import { fetchUserId } from "@data/fetchUserId";
-import { handleUserTokenAndIdCookiesSetting } from "@helpers/additional-funcs";
+import { useSelector } from "react-redux";
+
+import { UseStoreDispatcher } from "@redux/store/store";
 import {
   FIlterSelectorGenres,
   FilterSelectorOption,
   FilterSelectorPage,
   FilterSelectorYear,
 } from "@redux/selectors/filter-handling-selectors";
-import { useSelector } from "react-redux";
-import { ToastContainer, toast } from "react-toastify";
-import "react-toastify/dist/ReactToastify.css";
 import {
   DataSelectorFavorites,
   DataSelectorSearchMovies,
@@ -21,8 +15,21 @@ import {
   DataSelectorRatingMovies,
   DataSelectorYearArrangeMovies,
 } from "@stateSelectors/data-handling-selectors";
-import { UseStoreDispatcher } from "@redux/store/store";
-import { fetchFavoriteListThunk, fetchPopularMoviesThunk, fetchRatingMoviesThunk } from "@redux/slices/actions-slice";
+import {
+  fetchFavoriteListThunk,
+  fetchPopularMoviesThunk,
+  fetchRatingMoviesThunk,
+} from "@redux/slices/actions-slice";
+
+import { Box } from "@mui/material";
+import { handleUserTokenAndIdCookiesSetting } from "@helpers/additional-funcs";
+import CardItem from "./Template";
+import { MovieProps } from "./types";
+import { fetchUserId } from "@data/fetchUserId";
+
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
+import "@components/hero/index.css";
 
 const MovieCards = () => {
   const [movieData, setMovieData] = useState<MovieProps[]>([]);

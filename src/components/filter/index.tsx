@@ -12,7 +12,7 @@ import OptionSelect from "@selectors/option-selector/OptionSelector";
 import { Box, Typography, IconButton, SelectChangeEvent, Paper } from "@mui/material";
 import CloseOutlinedIcon from "@mui/icons-material/CloseOutlined";
 
-import CheckboxGenres from "../checkbox/Checkbox";
+import CheckboxGenres from "../checkbox";
 import PaginationMovies from "../pagination";
 import { byOption } from "@helpers/const-values";
 

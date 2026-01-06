@@ -1,11 +1,13 @@
-import { Box, Typography } from "@mui/material";
 import React, { useEffect, useState } from "react";
-import { useParams } from "react-router-dom";
-import { fetchMovieCredits, fetchMovieDetails } from "@data/fetchMovieCreditsDetails";
-import { CreditsDataProps, DetailsDataProps } from "./types";
-import { CardMedia, Card } from "@mui/material";
-import { theme } from "@helpers/theme-font";
 import { ThemeProvider } from "@emotion/react";
+import { useParams } from "react-router-dom";
+
+import { Box, Typography } from "@mui/material";
+import { CardMedia, Card } from "@mui/material";
+
+import { CreditsDataProps, DetailsDataProps } from "./types";
+import { fetchMovieCredits, fetchMovieDetails } from "@data/fetchMovieCreditsDetails";
+import { theme } from "@helpers/theme-font";
 
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
@@ -60,7 +62,8 @@ const CardRout = () => {
             <Typography variant="h5">Details:</Typography>
             <Typography variant="h6">Vote: {detailsData?.vote_average}(average)</Typography>
             <Typography variant="h6">
-              Runtime: {detailsData?.runtime} min / ({Math.round((detailsData?.runtime ?? 0) / 60)} hrs)
+              Runtime: {detailsData?.runtime} min / ({Math.round((detailsData?.runtime ?? 0) / 60)}{" "}
+              hrs)
             </Typography>
             <Typography variant="h6">
               Country: {detailsData?.production_countries?.map(country => country.name).join(", ")}
@@ -81,11 +84,15 @@ const CardRout = () => {
           <Box display="flex" flexDirection="column" ml={4}>
             <Typography variant="h5"> Cast:</Typography>
             {creditsData &&
-              creditsData.cast.slice(0, 10).map(member => <Typography key={member.id}>{member.name}</Typography>)}
+              creditsData.cast
+                .slice(0, 10)
+                .map(member => <Typography key={member.id}>{member.name}</Typography>)}
           </Box>
         </Box>
         <Typography variant="h5"> Overview:</Typography>
-        <Typography sx={{ display: "flex", flexDirection: "column", width: "400px", marginTop: "5px" }}>
+        <Typography
+          sx={{ display: "flex", flexDirection: "column", width: "400px", marginTop: "5px" }}
+        >
           {detailsData?.overview}{" "}
         </Typography>
         <ToastContainer />

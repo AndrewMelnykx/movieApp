@@ -1,10 +1,13 @@
 import React from "react";
+import { Provider } from "react-redux";
+
+import store from "@redux/store/store";
 import Hero from "./components/hero";
-import "./App.css";
+
 import { ThemeProvider } from "@mui/material";
 import { theme } from "@helpers/theme-font";
-import { Provider } from "react-redux";
-import store from "@redux/store/store";
+
+import "./App.css";
 
 function App() {
   return (

@@ -8,10 +8,10 @@ import {
 import { UseStoreDispatcher } from "@redux/store/store";
 import { authorizationActions } from "@redux/slices/authorization-slice";
 
-import AuthorizationModal from "@modals/LoginModal/LoginModal";
-import SignupModal from "@modals/SignupModal/SignupModal";
-import Header from "@header/Header";
-import Filter from "@filter/Filter";
+import AuthorizationModal from "@components/modals/LoginModal";
+import SignupModal from "@components/modals/SignupModal";
+import Header from "@components/header";
+import Filter from "@components/filter";
 
 import { Box } from "@mui/material";
 import MovieCards from "@components/cards/CardsByCondition";

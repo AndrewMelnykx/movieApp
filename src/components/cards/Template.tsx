@@ -1,10 +1,11 @@
 import React, { useEffect, useState } from "react";
-import { CardButton } from "./CardButton";
-import { Box, Card, Paper, Typography, CardMedia, CardContent } from "@mui/material";
 import { Link } from "react-router-dom";
-import { MovieProps } from "./types";
 
+import { CardButton } from "./Button";
+import { MovieProps } from "./types";
 import { useSelector } from "react-redux";
+
+import { Box, Card, Paper, Typography, CardMedia, CardContent } from "@mui/material";
 import { DataSelectorFavorites } from "@stateSelectors/data-handling-selectors";
 
 import { fetchFavoriteMovie } from "@data/fetchFavorites";
