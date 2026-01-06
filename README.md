@@ -1,5 +1,5 @@
 
-Guide [MovieApp](https://andrewmelnykx.github.io/movieApp/)
+[Link](https://andrewmelnykx.github.io/movieApp/)
 ![Screenshot 2025-06-06 100758](https://github.com/user-attachments/assets/a3fbfdc7-b79f-4b64-a8d9-f00380c2032f)
 ![image](https://github.com/user-attachments/assets/574a3c8d-8e85-4193-9df3-b94421233503)
 
