@@ -19,6 +19,7 @@ import { tokenFromCookies } from "@helpers/const-values";
 import HeroImage from "@assets/images/MovieHeroImage.png";
 
 import "./index.css";
+import ImportantMessage from "@components/important-message";
 
 export default function Hero() {
   const signUpVisibilityState = useSelector(SIgnUpAuthorizationSelector);
@@ -54,11 +55,12 @@ export default function Hero() {
       <Header />
       <Box className="cards-flex-container">
         <Box sx={{ marginLeft: "5%" }}>{filterVisibilityState && <Filter />}</Box>
-
         <Box>
           <MovieCards />
         </Box>
       </Box>
+      {wrongToken && <ImportantMessage />}
+
       {signUpVisibilityState && <SignupModal />}
       {loginVisibilityState && <AuthorizationModal />}
     </Box>
