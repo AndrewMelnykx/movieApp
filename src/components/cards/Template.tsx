@@ -37,38 +37,46 @@ const CardItem: React.FC<{ movie: MovieProps }> = ({ movie }) => {
 
   return (
     <Box key={movie.id} sx={{ display: "flex", justifyContent: "center" }}>
-      <Card sx={{ display: "flex" }} key={movie.id}>
+      <Card sx={{ display: "flex", position: "relative" }} key={movie.id}>
         <Paper sx={{ borderRadius: "1rem" }}>
           <Link to={`/add_info/${movie.id}`}>
             <CardMedia
               component="img"
               sx={{
-                width: "85%",
+                width: "100%",
                 margin: "0 auto",
                 display: "block",
-                p: "10% 5%",
-                borderRadius: "5.4rem",
               }}
               image={movie.poster_path ? `${imageLink}${movie.poster_path}` : EmptyImage}
               alt={`${movie.title}`}
             />
           </Link>
-
-          <Box display="flex" alignItems="center" justifyContent="space-between" columnGap="10px">
-            <CardContent>
-              <Typography variant="h6" className="movie-name" maxWidth={"200px"}>
-                {movie.title}
-              </Typography>
-              <Typography variant="h6" className="movie-rating" display={"flex"}>
-                {movie.vote_average}
-                <CardButton
-                  isInFavoriteList={isFavorite}
-                  handleFavoriteToggling={() => handleFavoriteToggling(movie.id)}
-                  buttonId={movie.id}
-                />
-              </Typography>
-            </CardContent>
-          </Box>
+          <CardContent
+            sx={{
+              display: "flex",
+              flexDirection: "column",
+              alignItems: "flex-start",
+              justifyContent: "center",
+            }}
+          >
+            <Typography variant="h6" alignSelf={"center"} mb={2}>
+              {movie.title}
+            </Typography>
+            <Box
+              display={"flex"}
+              alignItems={"center"}
+              position={"absolute"}
+              bottom={0}
+              sx={{ right: { xs: "0", md: "-20" } }}
+            >
+              <Typography variant="h6">{movie.vote_average}</Typography>
+              <CardButton
+                isInFavoriteList={isFavorite}
+                handleFavoriteToggling={() => handleFavoriteToggling(movie.id)}
+                buttonId={movie.id}
+              />
+            </Box>
+          </CardContent>
         </Paper>
       </Card>
     </Box>

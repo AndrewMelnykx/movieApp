@@ -7,7 +7,11 @@ interface CardButtonProps {
   buttonId: number;
   handleFavoriteToggling: () => void;
 }
-const CardButton: React.FC<CardButtonProps> = ({ buttonId, handleFavoriteToggling, isInFavoriteList }) => {
+const CardButton: React.FC<CardButtonProps> = ({
+  buttonId,
+  handleFavoriteToggling,
+  isInFavoriteList,
+}) => {
   const [isClicked, setIsClicked] = useState(isInFavoriteList);
   const handleClick = () => {
     setIsClicked(!isClicked);
@@ -18,7 +22,7 @@ const CardButton: React.FC<CardButtonProps> = ({ buttonId, handleFavoriteTogglin
   }, [isInFavoriteList]);
 
   return (
-    <IconButton sx={{ marginLeft: "20%", marginTop: "-1.5%" }} onClick={() => handleClick()} id={buttonId.toString()}>
+    <IconButton sx={{ marginLeft: "3%" }} onClick={() => handleClick()} id={buttonId.toString()}>
       {<Star style={{ color: isClicked ? "yellow" : "grey" }} />}
     </IconButton>
   );
