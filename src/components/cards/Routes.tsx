@@ -1,9 +1,10 @@
 import React, { useEffect, useState } from "react";
 import { ThemeProvider } from "@emotion/react";
-import { useParams } from "react-router-dom";
+import { useNavigate, useParams } from "react-router-dom";
 
-import { Box, Typography } from "@mui/material";
+import { Box, Button, Typography } from "@mui/material";
 import { CardMedia, Card } from "@mui/material";
+import KeyboardReturnIcon from "@mui/icons-material/KeyboardReturn";
 
 import { CreditsDataProps, DetailsDataProps } from "./types";
 import { fetchMovieCredits, fetchMovieDetails } from "@data/fetchMovieCreditsDetails";
@@ -16,6 +17,11 @@ const CardRout = () => {
   const { movieId } = useParams();
   const [creditsData, setCreditsData] = useState<CreditsDataProps>();
   const [detailsData, setDetailsData] = useState<DetailsDataProps>();
+
+  const navigate = useNavigate();
+  const handleTurnBackPage = () => {
+    navigate(-1);
+  };
 
   const imageLink = import.meta.env.VITE_MOVIE_APP_IMAGES_LINK;
 
@@ -62,9 +68,15 @@ const CardRout = () => {
             flexDirection={{ xs: "column", md: "row" }}
           >
             <Box display={"flex"} flexDirection={"column"}>
-              <Typography variant="h4" bgcolor={"transparent"} mb={2}>
-                {detailsData?.original_title}
-              </Typography>
+              <Box display={"flex"} alignItems={"center"}>
+                <Button onClick={handleTurnBackPage} sx={{ mt: "-1rem", color: "white" }}>
+                  <KeyboardReturnIcon />
+                </Button>
+                <Typography variant="h4" bgcolor={"transparent"} mb={2}>
+                  {detailsData?.original_title}
+                </Typography>
+              </Box>
+
               <Card sx={{ borderRadius: "1rem", bgcolor: "transparent" }}>
                 <CardMedia
                   component="img"
