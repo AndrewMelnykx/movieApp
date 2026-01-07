@@ -61,23 +61,25 @@ const CardRout = () => {
             p={"2% 2% 2% 2%"}
             flexDirection={{ xs: "column", md: "row" }}
           >
-            {" "}
-            <Typography variant="h4" bgcolor={"transparent"}>
-              {detailsData?.original_title}
-            </Typography>
-            <Card>
-              <CardMedia
-                component="img"
-                sx={{
-                  width: { xs: "300xp", md: "600px" },
-                  margin: "0 auto",
-                  objectFit: "cover",
-                  height: "100%",
-                }}
-                image={`${imageLink}${detailsData?.backdrop_path}`}
-                alt={`${detailsData?.title}`}
-              />
-            </Card>
+            <Box display={"flex"} flexDirection={"column"}>
+              <Typography variant="h4" bgcolor={"transparent"} mb={2}>
+                {detailsData?.original_title}
+              </Typography>
+              <Card sx={{ borderRadius: "1rem", bgcolor: "transparent" }}>
+                <CardMedia
+                  component="img"
+                  sx={{
+                    width: { xs: "300xp", md: "600px" },
+                    margin: "0 auto",
+                    objectFit: "cover",
+                    height: "100%",
+                  }}
+                  image={`${imageLink}${detailsData?.backdrop_path}`}
+                  alt={`${detailsData?.title}`}
+                />
+              </Card>
+            </Box>
+
             <Box
               display="flex"
               flexDirection={{ xs: "column", md: "row" }}
@@ -128,8 +130,7 @@ const CardRout = () => {
             flexDirection={{ xs: "column", md: "row" }}
             width={"90%"}
             ml={{ xs: "6%", md: "5%" }}
-            // p={{ xs: "1% 1% 1% 1%", md: "0" }}
-            bgcolor={"#470047"}
+            bgcolor={"#757500"}
             p={"2% 2% 2% 2%"}
             mt={{ xs: "5%", md: "0" }}
             borderRadius={"3rem"}
