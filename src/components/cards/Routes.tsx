@@ -47,55 +47,107 @@ const CardRout = () => {
   return (
     <ThemeProvider theme={theme}>
       <Box
-        display="flex"
-        flexDirection="column"
-        alignItems="center"
-        justifyContent="center"
-        position="relative"
-        sx={{ fontFamily: "Roman Jelly" }}
+        display={"flex"}
+        flexDirection={"column"}
+        alignItems={"flex-start"}
+        sx={{ fontFamily: "Roman Jelly", color: "white" }}
+        width={"100%"}
       >
-        <Box position="absolute" top={20} left={70}>
-          <Typography variant="h4">{detailsData?.original_title}</Typography>
-        </Box>
-        <Box display="flex" mt={8} alignItems="flex-start">
-          <Box mr={4} width="300px">
-            <Typography variant="h5">Details:</Typography>
-            <Typography variant="h6">Vote: {detailsData?.vote_average}(average)</Typography>
-            <Typography variant="h6">
-              Runtime: {detailsData?.runtime} min / ({Math.round((detailsData?.runtime ?? 0) / 60)}{" "}
-              hrs)
+        <Box display={"flex"} flexDirection={"column"} width={"100%"}>
+          <Box
+            display={"flex"}
+            ml={"5%"}
+            mb={"2rem"}
+            p={"2% 2% 2% 2%"}
+            flexDirection={{ xs: "column", md: "row" }}
+          >
+            {" "}
+            <Typography variant="h4" bgcolor={"transparent"}>
+              {detailsData?.original_title}
             </Typography>
-            <Typography variant="h6">
-              Country: {detailsData?.production_countries?.map(country => country.name).join(", ")}
-            </Typography>
-            <Typography variant="h6">
-              <i>Genres: {detailsData?.genres?.map(genre => genre.name).join(", ")}</i>
-            </Typography>
-            <Typography variant="h6">Budget: {detailsData?.budget}$</Typography>
+            <Card>
+              <CardMedia
+                component="img"
+                sx={{
+                  width: { xs: "300xp", md: "600px" },
+                  margin: "0 auto",
+                  objectFit: "cover",
+                  height: "100%",
+                }}
+                image={`${imageLink}${detailsData?.backdrop_path}`}
+                alt={`${detailsData?.title}`}
+              />
+            </Card>
+            <Box
+              display="flex"
+              flexDirection={{ xs: "column", md: "row" }}
+              ml={{ xs: "0", md: "6rem" }}
+              alignItems={"flex-start"}
+              justifyContent={"space-between"}
+              gap={"8rem"}
+              bgcolor={"#470047"}
+              p={"2% 2% 2% 2%"}
+              mt={{ xs: "5%", md: "0" }}
+              borderRadius={"3rem"}
+            >
+              <Box display={"flex"} flexDirection={"column"}>
+                <Typography variant="h5"> Cast:</Typography>
+                {creditsData &&
+                  creditsData.cast
+                    .slice(0, 10)
+                    .map(member => <Typography key={member.id}>{member.name}</Typography>)}
+              </Box>
+
+              <Box
+                display={"flex"}
+                flexDirection={"column"}
+                alignItems={"flex-start"}
+                justifyContent={"center"}
+              >
+                <Typography variant="h5">Details:</Typography>
+                <Typography variant="h6">Vote: {detailsData?.vote_average}(average)</Typography>
+                <Typography variant="h6">
+                  Runtime: {detailsData?.runtime} min / (
+                  {Math.round((detailsData?.runtime ?? 0) / 60)} hrs)
+                </Typography>
+                <Typography variant="h6">
+                  Country:{" "}
+                  {detailsData?.production_countries?.map(country => country.name).join(", ")}
+                </Typography>
+                <Typography variant="h6">
+                  <i>Genres: {detailsData?.genres?.map(genre => genre.name).join(", ")}</i>
+                </Typography>
+                <Typography variant="h6">Budget: {detailsData?.budget}$</Typography>
+              </Box>
+            </Box>
           </Box>
-          <Card>
-            <CardMedia
-              component="img"
-              sx={{ width: "600px", margin: "0" }}
-              image={`${imageLink}${detailsData?.backdrop_path}`}
-              alt={`${detailsData?.title}`}
-            />
-          </Card>
-          <Box display="flex" flexDirection="column" ml={4}>
-            <Typography variant="h5"> Cast:</Typography>
-            {creditsData &&
-              creditsData.cast
-                .slice(0, 10)
-                .map(member => <Typography key={member.id}>{member.name}</Typography>)}
+
+          <Box
+            display={"flex"}
+            justifyContent={{ xs: "center", md: "space-between" }}
+            flexDirection={{ xs: "column", md: "row" }}
+            width={"90%"}
+            ml={{ xs: "6%", md: "5%" }}
+            // p={{ xs: "1% 1% 1% 1%", md: "0" }}
+            bgcolor={"#470047"}
+            p={"2% 2% 2% 2%"}
+            mt={{ xs: "5%", md: "0" }}
+            borderRadius={"3rem"}
+          >
+            <Box
+              display={"flex"}
+              flexDirection={"column"}
+              alignItems={"flex-start"}
+              justifyContent={"center"}
+              mb={5}
+              width={{ xs: "75%", md: "100%" }}
+            >
+              <Typography variant="h5"> Overview:</Typography>
+              <Typography>{detailsData?.overview} </Typography>
+            </Box>
           </Box>
+          <ToastContainer />
         </Box>
-        <Typography variant="h5"> Overview:</Typography>
-        <Typography
-          sx={{ display: "flex", flexDirection: "column", width: "400px", marginTop: "5px" }}
-        >
-          {detailsData?.overview}{" "}
-        </Typography>
-        <ToastContainer />
       </Box>
     </ThemeProvider>
   );
