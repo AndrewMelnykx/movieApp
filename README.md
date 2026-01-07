@@ -2,9 +2,9 @@
 [LINK](https://andrewmelnykx.github.io/movieApp/)
 
 
-(<img width="1869" height="892" alt="Screenshot 2026-01-06 184228" src="https://github.com/user-attachments/assets/cd95c9ea-f5fb-43c8-8d08-698c38569331" />
-)(<img width="1871" height="880" alt="Screenshot 2026-01-07 050029" src="https://github.com/user-attachments/assets/fc85dde1-e59c-47b1-b94f-498f27f9854e" />
-)
+<img width="1869" height="892" alt="Screenshot 2026-01-06 184228" src="https://github.com/user-attachments/assets/cd95c9ea-f5fb-43c8-8d08-698c38569331" />
+<img width="1871" height="880" alt="Screenshot 2026-01-07 050029" src="https://github.com/user-attachments/assets/fc85dde1-e59c-47b1-b94f-498f27f9854e" />
+
 
 
 You have to be registrated on TMDB and already have token.
