@@ -19,6 +19,7 @@ const PaginationMovies = () => {
       sx={{
         margin: "2%",
         marginTop: { xs: "10%", md: "15" },
+        mb: "2",
         "& .MuiPaginationItem-root": {
           transition: "color 0.3s ease-in-out",
         },

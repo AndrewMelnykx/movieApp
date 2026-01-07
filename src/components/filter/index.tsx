@@ -39,6 +39,7 @@ const Filter = () => {
         height: { xs: "480px", md: "530px" },
         marginLeft: { xs: "10%", md: "-3%" },
         borderRadius: "1rem",
+        mt: "1rem",
       }}
     >
       <Box className="container" sx={{ display: "flex" }} ml={2}>

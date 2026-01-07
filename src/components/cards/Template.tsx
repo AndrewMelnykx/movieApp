@@ -37,8 +37,8 @@ const CardItem: React.FC<{ movie: MovieProps }> = ({ movie }) => {
 
   return (
     <Box key={movie.id} sx={{ display: "flex", justifyContent: "center" }}>
-      <Card sx={{ display: "flex", position: "relative" }} key={movie.id}>
-        <Paper sx={{ borderRadius: "1rem" }}>
+      <Card sx={{ display: "flex", position: "relative", borderRadius: "1rem" }} key={movie.id}>
+        <Paper>
           <Link to={`/add_info/${movie.id}`}>
             <CardMedia
               component="img"
