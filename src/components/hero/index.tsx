@@ -12,14 +12,15 @@ import AuthorizationModal from "@components/modals/LoginModal";
 import SignupModal from "@components/modals/SignupModal";
 import Header from "@components/header";
 import Filter from "@components/filter";
+import ImportantMessage from "@components/important-message";
 
 import { Box } from "@mui/material";
 import MovieCards from "@components/cards/CardsByCondition";
 import { tokenFromCookies } from "@helpers/const-values";
 import HeroImage from "@assets/images/MovieHeroImage.png";
+import MobileHeroImage from "@assets/images/MovieHeroMobileImage.png";
 
 import "./index.css";
-import ImportantMessage from "@components/important-message";
 
 export default function Hero() {
   const signUpVisibilityState = useSelector(SIgnUpAuthorizationSelector);
@@ -41,7 +42,7 @@ export default function Hero() {
   return (
     <Box
       sx={{
-        backgroundImage: `url(${HeroImage})`,
+        backgroundImage: { xs: `url(${MobileHeroImage})`, md: `url(${HeroImage})` },
         backgroundSize: "100% auto",
         backgroundPosition: "center",
         backgroundRepeat: "no-repeat",
