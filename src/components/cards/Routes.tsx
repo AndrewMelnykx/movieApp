@@ -84,15 +84,21 @@ const CardRout = () => {
               display="flex"
               flexDirection={{ xs: "column", md: "row" }}
               ml={{ xs: "0", md: "6rem" }}
-              alignItems={"flex-start"}
+              alignItems={{ xs: "center", md: "flex-start" }}
               justifyContent={"space-between"}
               gap={"8rem"}
               bgcolor={"#470047"}
               p={"2% 2% 2% 2%"}
-              mt={{ xs: "5%", md: "0" }}
+              mt={{ xs: "5%", md: "" }}
               borderRadius={"3rem"}
             >
-              <Box display={"flex"} flexDirection={"column"}>
+              <Box
+                display={"flex"}
+                flexDirection={"column"}
+                alignSelf={{ xs: "center" }}
+                ml={{ xs: "0.5rem" }}
+                alignItems={{ xs: "center", md: "flex-start" }}
+              >
                 <Typography variant="h5"> Cast:</Typography>
                 {creditsData &&
                   creditsData.cast
@@ -103,7 +109,7 @@ const CardRout = () => {
               <Box
                 display={"flex"}
                 flexDirection={"column"}
-                alignItems={"flex-start"}
+                alignItems={{ xs: "center", md: "flex-start" }}
                 justifyContent={"center"}
               >
                 <Typography variant="h5">Details:</Typography>
@@ -142,6 +148,7 @@ const CardRout = () => {
               justifyContent={"center"}
               mb={5}
               width={{ xs: "75%", md: "100%" }}
+              p={"2rem 2rem 0 2rem"}
             >
               <Typography variant="h5"> Overview:</Typography>
               <Typography>{detailsData?.overview} </Typography>
