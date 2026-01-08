@@ -17,9 +17,6 @@ const OptionSelect: React.FC<SelectorsProps> = ({
         variant="standard"
         sx={{ width: "100%", margin: "3%", marginLeft: "3%", marginTop: "8%" }}
       >
-        <InputLabel id="filter-select">
-          <i> Filter by: {label}</i>
-        </InputLabel>
         <Select
           labelId="filter-select"
           onChange={onChange}

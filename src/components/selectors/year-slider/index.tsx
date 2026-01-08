@@ -40,9 +40,9 @@ const YearsSlider = () => {
   }, [yearsSliderState, checkedGenres]);
 
   return (
-    <Box mt={3} mb={2} ml={2} width={{ xs: "80%", md: "90%" }}>
+    <Box mt={3} mb={2} ml={1} width={{ xs: "80%", md: "90%" }}>
       <Typography mb={1} className="year-slider-typography">
-        <i>Filter by:year</i>
+        Released in:
       </Typography>
       <Slider
         getAriaLabel={() => "Year range"}

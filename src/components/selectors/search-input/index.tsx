@@ -47,7 +47,9 @@ const SearchInput = () => {
             },
             "& .MuiInputLabel-root": {
               color: "black",
+              fontSize: "14px",
             },
+
             "& .MuiInputLabel-root.Mui-focused": {
               color: "aqua",
               transition: " 0.3s ease-in-out",
@@ -55,7 +57,7 @@ const SearchInput = () => {
           }}
           id={"movie-search-input"}
           variant="standard"
-          label="Movie`s name . . . "
+          label="Movie name"
           onChange={handleInputChange}
           value={value}
         ></TextField>

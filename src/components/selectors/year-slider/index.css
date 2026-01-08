@@ -1,5 +1,6 @@
 .custom-slider .MuiSlider-thumb {
   background-color: black;
+  margin-left: 2%;
 }
 
 .custom-slider .MuiSlider-track {
